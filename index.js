@@ -1,9 +1,10 @@
-const { Menu, MenuItem, MenuCheckBox } = rarumenu;
+const { Menu, MenuItem, MenuCheckBox, MenuDiv } = rarumenu;
 
 /** @type {import('./lib/context-menu').MenuOptions} */
 const options = {
     onbeforeopen: (menu) => {
-        console.log('before open');
+        menu.items.get('div 1').setContent(`${menu.currentTarget.nodeName} ${menu.currentTarget.getAttribute('id')}`);
+        menu.items.get('item1').disabled = document.getSelection().isCollapsed;
     },
     items: [
         new MenuItem({
@@ -50,10 +51,27 @@ const options = {
                 console.log(`${item.id} clicked`);
             }
         }),
+        new MenuDiv({
+            id: 'div 1',
+            content: 'fixed text'
+        }),
         new MenuCheckBox({
             id: 'check 1',
-            checked: false,
             disabled: true,
+            onclick: (menu, item) => {
+                console.log(`${item.id} clicked: ${item.checked}`);
+            }
+        }),
+        new MenuCheckBox({
+            id: 'check 2',
+            checked: false,
+            onclick: (menu, item) => {
+                console.log(`${item.id} clicked: ${item.checked}`);
+            }
+        }),
+        new MenuCheckBox({
+            id: 'check 3',
+            checked: true,
             onclick: (menu, item) => {
                 console.log(`${item.id} clicked: ${item.checked}`);
             }
