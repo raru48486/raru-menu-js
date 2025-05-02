@@ -1,4 +1,4 @@
-const { Menu, MenuItem, MenuCheckBox, MenuDiv, MenuInput } = rarumenu;
+const { Menu, MenuItem, MenuCheckBox, MenuDiv, MenuInput, MenuHr } = rarumenu;
 
 /** @type {import('./lib/context-menu').MenuOptions} */
 const options = {
@@ -9,17 +9,15 @@ const options = {
     },
     items: [
         new MenuItem({
-            id: 'hello',
             content: 'こんにちは',
             onclick: (menu, item) => {
-                console.log(`${item.id} clicked`);
+                console.log('こんにちは clicked');
             }
         }),
         new MenuItem({
-            id: 'world',
             content: 'せかい',
             onclick: (menu, item) => {
-                console.log(`${item.id} clicked`);
+                console.log('せかい clicked');
             }
         }),
         new MenuItem({
@@ -30,34 +28,35 @@ const options = {
                 console.log(`${item.id} clicked`);
             }
         }),
+        new MenuHr(),
         new MenuItem({
-            id: '1',
+            content: '1',
             fitContent: true,
             onclick: (menu, item) => {
-                console.log(`${item.id} clicked`);
+                console.log('1 clicked');
             }
         }),
         new MenuItem({
-            id: '2',
+            content: '2',
             fitContent: true,
             onclick: (menu, item) => {
-                console.log(`${item.id} clicked`);
+                console.log('2 clicked');
             }
         }),
         new MenuItem({
-            id: '3',
+            content: '3',
             disabled: true,
             fitContent: true,
             onclick: (menu, item) => {
-                console.log(`${item.id} clicked`);
+                console.log('3 clicked');
             }
         }),
+        new MenuHr(),
         new MenuInput({
-            id: 'input 1',
             label: '検索',
             placeholder: '検索条件',
             onsubmit: (menu, item) => {
-                console.log(`submit ${item.id} with value ${item.value}`);
+                console.log(`submit with value ${item.value}`);
             }
         }),
         new MenuInput({
@@ -73,24 +72,24 @@ const options = {
             content: 'fixed text'
         }),
         new MenuCheckBox({
-            id: 'check 1',
             disabled: true,
+            content: 'check 1',
             onclick: (menu, item) => {
-                console.log(`${item.id} clicked: ${item.checked}`);
+                console.log(`check 1 clicked: ${item.checked}`);
             }
         }),
         new MenuCheckBox({
-            id: 'check 2',
             checked: false,
+            content: 'check 2',
             onclick: (menu, item) => {
-                console.log(`${item.id} clicked: ${item.checked}`);
+                console.log(`check 2 clicked: ${item.checked}`);
             }
         }),
         new MenuCheckBox({
-            id: 'check 3',
             checked: true,
+            content: 'check 3',
             onclick: (menu, item) => {
-                console.log(`${item.id} clicked: ${item.checked}`);
+                console.log(`check 3 clicked: ${item.checked}`);
             }
         }),
     ],

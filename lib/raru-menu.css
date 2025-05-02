@@ -13,15 +13,9 @@
     border: 0px;
     border-radius: 5px;
     background-color: white;
-    padding: 3px;
+    padding: 10px 0px;
     margin: 0px;
     box-shadow: 0px 3px 6px 1px rgba(0, 0, 0, 0.3);
-}
-
-.context-menu-div hr {
-    border: solid 3px red;
-    height: 1px;
-    width: 100%;
 }
 
 .context-menu-item {
@@ -103,4 +97,18 @@
 .context-menu-input>input[type=text]:focus {
     width: 100%;
     outline: solid 1px gray;
+}
+
+.context-menu-hr {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+.context-menu-hr > hr {
+    border-top: 0.1px solid lightsteelblue;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    width: 100%;
 }
