@@ -6,6 +6,7 @@ const options = {
         menu.items.get('div 1').setContent(`${menu.currentTarget.nodeName} ${menu.currentTarget.getAttribute('id')}`);
         menu.items.get('item1').disabled = document.getSelection().isCollapsed;
         menu.items.get('input 2').disabled = document.getSelection().isCollapsed;
+        menu.items.get('time').setContent(new Date().toLocaleTimeString());
     },
     items: [
         new MenuItem({
@@ -92,6 +93,10 @@ const options = {
                 console.log(`check 3 clicked: ${item.checked}`);
             }
         }),
+        new MenuDiv({
+            id: 'time',
+            content: '',
+        })
     ],
 }
 
