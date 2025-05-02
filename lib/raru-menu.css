@@ -77,9 +77,21 @@
 }
 
 .context-menu-input {
+    padding: 5px;
+    margin: 0px;
+    border: none;
     width: 100%;
     display: flex;
     gap: 5px;
+    box-sizing: border-box;
+}
+
+.context-menu-input[disabled] {
+    color: gray;
+}
+
+.context-menu-input>label {
+    margin-right: 0.5em;
 }
 
 .context-menu-input>input[type=text] {
