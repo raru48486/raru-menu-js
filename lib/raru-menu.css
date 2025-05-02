@@ -64,7 +64,8 @@
 }
 
 .context-menu-div {
-    padding: 5px 1.5em;
+    padding: 5px 1.5em 5px 0.5em;
+    font-weight: bold;
     color: black;
     margin: 0px;
     border: none;
