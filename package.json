@@ -1,0 +1,38 @@
+{
+  "name": "raru-menu-js",
+  "version": "0.1.0",
+  "description": "階層なしの簡易的なコンテキストメニュー",
+  "homepage": "https://github.com/raru48486/raru-menu-js#readme",
+  "bugs": {
+    "url": "https://github.com/raru48486/raru-menu-js/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raru48486/raru-menu-js.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "license": "MIT",
+  "author": "raru48486",
+  "main": "./dist/raru-menu.umd.js",
+  "module": "./dist/raru-menu.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/raru-menu.es.js",
+      "require": "./dist/raru-menu.umd.js"
+    },
+    "./raru-menu.css": "./dist/raru-menu.css"
+  },
+  "engines": {
+    "node": ">=18.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^6.3.1"
+  }
+}

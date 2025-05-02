@@ -1,0 +1,12 @@
+#app {
+    width: calc(100% - 2 * 30px);
+    margin: 30px;
+    background-color: lightblue;
+    height: 400px;
+}
+
+#app .context-menu-root {
+    width: 150px;
+    font-family: 'Segoe UI Variable';
+    font-size: 10pt;
+}
