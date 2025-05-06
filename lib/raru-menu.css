@@ -7,15 +7,21 @@
     text-wrap: nowrap;
     user-select: none;
     width: 200px;
+    opacity: 1;
+    transition: opacity 0.2s ease-out;
+}
+
+.context-menu-root.prerender {
+    opacity: 0;
 }
 
 .context-menu-frame {
-    border: 0px;
-    border-radius: 5px;
+    border: 0.5px solid lightgray;
+    border-radius: 8px;
     background-color: white;
     padding: 10px 0px;
     margin: 0px;
-    box-shadow: 0px 3px 6px 1px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 10px 20px 1px rgba(0, 0, 0, 0.2);
 }
 
 .context-menu-item {
@@ -106,7 +112,7 @@
 }
 
 .context-menu-hr > hr {
-    border-top: 0.1px solid lightsteelblue;
+    border-top: 0.1px solid lightgray;
     border-left: none;
     border-right: none;
     border-bottom: none;
